@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+   <mapper namespace="mapperInterface.CommentMapper">
+   
+   <select id="commentList" resultType="vo.CommentVO">
+   	select * from comment where seq=#{seq}
+   </select>
+   <update id="commentUp" >
+   	update comment set com=#{com}, date=#{date} where mySeq=#{mySeq}
+   </update>
+   <delete id="commentDel">
+   	delete from comment where mySeq=#{mySeq}
+   </delete>
+   <delete id="commentDel2">
+   	delete from comment where seq=#{seq}
+   </delete>
+   <insert id="commentIn">
+   	insert into comment (seq, logId,myId,com)values (#{seq},#{logId},#{myId},#{com})
+   </insert>
+   </mapper>

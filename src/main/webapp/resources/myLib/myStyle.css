@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body {
+	background-color:snow;
+		}
+h2 {
+	color:dim;
+	}
+p {
+	color : green;
+}
+/* 	Link Button 만들기 */
+.button {
+	width : 140px; height: 70px; background-color: beige;
+	border-radius : 20px; border: 5px solid lightgray;
+	text-align: center;
+}
+a {
+	color : black; text-decoration: none;
+}
+/* >를 붙이면 button안에 있는 a만 가능 
+띄어쓰기를 하면 button 안에 있는 모든 a(손자, 증손자 까지) */
+a {
+	line-height: 70px;
+}
+a:hover{ color: lime; font-size: 1.1em;}
+a:active{ color:white; }
